@@ -27,6 +27,11 @@ params:
     
   assets:
     disableHLJS: true
+    favicon: "/images/github.svg"
+    favicon16x16: "/images/github.svg"
+    favicon32x32: "/images/github.svg"
+    apple_touch_icon: "/images/github.svg"
+    safari_pinned_tab: "/images/github.svg"
 
   comments:
     giscus:
