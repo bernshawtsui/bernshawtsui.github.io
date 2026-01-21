@@ -1,0 +1,44 @@
+baseURL: 'https://bernshawtsui.github.io/'
+languageCode: en-us
+title: Wenshuo's Site
+theme: PaperMod
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  defaultTheme: light
+  profileMode:
+    enabled: true
+    title: Wenshuo Max Cui
+    subtitle: "Data Engineer at &nbsp;<img src='/images/tiktok.svg' width='60' height='60' style='display: inline-block !important; vertical-align: middle; margin-bottom: 2px;' alt='TikTok'>"
+    imageUrl: "https://github.com/bernshawtsui.png"
+    imageTitle: "Wenshuo"
+  
+  socialIcons:
+    - name: github
+      url: "https://github.com/bernshawtsui"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/cuiwenshuo/"
+    - name: email
+      url: "mailto:cuiwenshuo@gmail.com"
+    
+  assets:
+    disableHLJS: true
+
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about
+      weight: 10
+    - identifier: resume
+      name: Resume
+      url: /resume
+      weight: 20
+    - identifier: blog
+      name: Blog
+      url: /posts
+      weight: 30
