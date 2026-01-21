@@ -1,12 +1,12 @@
 ---
 title: "Commit 0: Hello World!"
-date: 2024-01-21T00:00:00+00:00
+date: 2026-01-21T00:00:00+00:00
 tags: []
 author: "Wenshuo"
 showToc: false
 draft: false
 hidemeta: false
-comments: false
+comments: true
 description: "Why I started this blog."
 disableHLJS: true
 disableShare: false
@@ -15,7 +15,7 @@ searchHidden: false
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
-ShowWordCount: true
+ShowWordCount: false
 UseHugoToc: true
 ---
 

@@ -28,6 +28,13 @@ params:
   assets:
     disableHLJS: true
 
+  comments:
+    giscus:
+      repo: "bernshawtsui/bernshawtsui.github.io" # Verify this
+      repoId: "R_kgDOQ-Siig"
+      category: "Announcements" # Or whatever you chose
+      categoryId: "DIC_kwDOQ-Siis4C1QXw"
+
 menu:
   main:
     - identifier: about
