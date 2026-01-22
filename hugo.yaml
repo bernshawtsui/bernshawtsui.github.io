@@ -2,6 +2,7 @@ baseURL: 'https://bernshawtsui.github.io/'
 languageCode: en-us
 title: Wenshuo's Site
 theme: PaperMod
+enableRobotsTXT: true
 
 markup:
   goldmark:
