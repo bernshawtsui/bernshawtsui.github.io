@@ -36,9 +36,9 @@ params:
 
   comments:
     giscus:
-      repo: "bernshawtsui/bernshawtsui.github.io" # Verify this
+      repo: "bernshawtsui/bernshawtsui.github.io"
       repoId: "R_kgDOQ-Siig"
-      category: "Announcements" # Or whatever you chose
+      category: "Announcements"
       categoryId: "DIC_kwDOQ-Siis4C1QXw"
 
 menu:
