@@ -116,9 +116,7 @@ Now we’re entering a world where:
 - generating 10,000 lines of passable code is **cheap**
 - scaffolding pipelines, tests, connectors, and dashboards can be **semi-automated**
 
-The limiting factor is no longer *keystrokes*, the new bottleneck is **context**. In entropy terms: **LLMs collapse implementation cost, but they *amplify ambiguity***. LLMs don’t replace engineers with better syntax. They replace teams who can’t supply clear intent, constraints, and definitions.
-
-> LLMs don’t just fail to reduce entropy — they accelerate it when definitions are weak, because they generate plausible implementations faster than organisations can validate meaning.
+The limiting factor is no longer *keystrokes*, the new bottleneck is **context**. In entropy terms: **LLMs collapse implementation cost, but they *amplify ambiguity***; LLMs don’t just fail to reduce entropy — they accelerate it when definitions are weak, because they generate plausible implementations faster than organisations can validate meaning.
 
 In other words:
 
