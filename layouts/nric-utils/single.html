@@ -1,0 +1,128 @@
+{{- define "main" }}
+<article class="nric-page">
+  <link rel="stylesheet" href="/css/nric-utils.css" />
+
+  <header class="nric-hero">
+    <p class="nric-eyebrow">Generate and Validate Singapore NRIC</p>
+    <h1>Singapore NRIC Utility Tool</h1>
+    <p>
+      Validate and generate NRIC values locally with no backend. Everything runs
+      in your browser.
+    </p>
+  </header>
+
+  <section class="nric-intro">
+    <h2>Why I Built This</h2>
+    <p>
+      I was engaged by a client to work on data quality monitoring solutions, and one critical
+      data element was <strong>NRIC</strong>. We needed to be able to <strong>validate</strong>
+      NRICs to ensure they were actually correct, and because we couldn't access the highly
+      sensitive real NRIC data, we also needed to <strong>generate</strong> synthetic NRICs —
+      both valid and invalid — for testing purposes.
+    </p>
+    <p>
+      Note that "valid" here doesn't mean the NRIC belongs to a real person. It simply means
+      the value is <em>mathematically correct</em> and passes the
+      <a href="https://en.wikipedia.org/wiki/National_Registration_Identity_Card#Structure_of_the_NRIC_number/FIN" target="_blank" rel="noopener">checksum algorithm</a>.
+      I decided to put it here in case anyone else finds it useful.
+    </p>
+  </section>
+
+  <section class="nric-grid" aria-label="NRIC tools">
+    <div class="nric-card" id="validate-single-card">
+      <h2>Validate One NRIC</h2>
+      <p>Check whether a single NRIC has a valid format and checksum.</p>
+      <form id="validate-form">
+        <label for="validate-nric">NRIC</label>
+        <div class="nric-inline-group">
+          <input
+            id="validate-nric"
+            name="nric"
+            type="text"
+            placeholder="e.g. S1234567D"
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Validate</button>
+        </div>
+      </form>
+      <p id="validate-result" class="nric-result" aria-live="polite"></p>
+    </div>
+
+    <div class="nric-card" id="validate-file-card">
+      <h2>Validate NRICs in File</h2>
+      <p>
+        Upload a csv file, provide the NRIC column name, and download a csv
+        with a new <code>valid</code> column.
+      </p>
+      <form id="validate-file-form">
+        <label for="validate-file-input">File (CSV)</label>
+        <input
+          id="validate-file-input"
+          name="file"
+          type="file"
+          accept=".csv"
+          required
+        />
+
+        <label for="validate-file-column">Column Name</label>
+        <input
+          id="validate-file-column"
+          name="column"
+          type="text"
+          placeholder="e.g. nric"
+          autocomplete="off"
+          required
+        />
+
+        <button type="submit">Validate &amp; Download CSV</button>
+      </form>
+      <p id="validate-file-result" class="nric-result" aria-live="polite"></p>
+    </div>
+
+    <div class="nric-card" id="generate-single-card">
+      <h2>Generate One NRIC</h2>
+      <p>Create a random NRIC that is either valid or intentionally invalid.</p>
+      <form id="generate-form">
+        <label for="generate-validity">Validity</label>
+        <select id="generate-validity" name="validity">
+          <option value="true">Valid</option>
+          <option value="false">Invalid</option>
+        </select>
+        <button type="submit">Generate</button>
+      </form>
+      <p id="generate-result" class="nric-result nric-mono" aria-live="polite"></p>
+    </div>
+
+    <div class="nric-card" id="generate-list-card">
+      <h2>Generate NRIC List</h2>
+      <p>Generate multiple NRICs and download as CSV.</p>
+      <form id="generate-list-form">
+        <label for="generate-list-count">Count</label>
+        <input
+          id="generate-list-count"
+          name="count"
+          type="number"
+          min="1"
+          max="1000"
+          value="10"
+          required
+        />
+
+        <label for="generate-list-validity">Validity</label>
+        <select id="generate-list-validity" name="validity">
+          <option value="true">Valid</option>
+          <option value="false">Invalid</option>
+        </select>
+
+        <button type="submit">Generate CSV</button>
+      </form>
+      <p id="generate-list-result" class="nric-result" aria-live="polite"></p>
+    </div>
+  </section>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="/js/nric-utils-app.js"></script>
+{{- end }}

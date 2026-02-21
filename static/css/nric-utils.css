@@ -1,0 +1,258 @@
+/* ── NRIC Utility Page Styles ─── scoped under .nric-page ── */
+
+/* ── Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap');
+
+/* ── Variables ── */
+.nric-page {
+  --nric-accent: #6366f1;
+  --nric-accent-hover: #4f46e5;
+  --nric-surface: rgba(255, 255, 255, 0.7);
+  --nric-surface-hover: rgba(255, 255, 255, 0.85);
+  --nric-border: rgba(99, 102, 241, 0.15);
+  --nric-text: #1e293b;
+  --nric-text-muted: #64748b;
+  --nric-success: #10b981;
+  --nric-error: #ef4444;
+  --nric-radius: 16px;
+  --nric-radius-sm: 10px;
+  --nric-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --nric-shadow-hover: 0 4px 20px rgba(99, 102, 241, 0.15);
+
+  font-family: 'Outfit', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+/* Dark-mode overrides (PaperMod uses data-theme on <html>) */
+[data-theme="dark"] .nric-page {
+  --nric-surface: rgba(30, 41, 59, 0.7);
+  --nric-surface-hover: rgba(30, 41, 59, 0.85);
+  --nric-border: rgba(99, 102, 241, 0.25);
+  --nric-text: #e2e8f0;
+  --nric-text-muted: #94a3b8;
+  --nric-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15);
+  --nric-shadow-hover: 0 4px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* ── Hero ── */
+.nric-hero {
+  text-align: center;
+  padding: 2rem 0 1.5rem;
+}
+
+.nric-eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--nric-accent);
+  margin-bottom: 0.5rem;
+}
+
+.nric-hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--nric-text);
+  margin: 0 0 0.5rem;
+}
+
+.nric-hero > p:last-child {
+  color: var(--nric-text-muted);
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── Intro ── */
+.nric-intro {
+  max-width: 680px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--nric-surface);
+  border: 1px solid var(--nric-border);
+  border-radius: var(--nric-radius);
+  box-shadow: var(--nric-shadow);
+}
+
+.nric-intro h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--nric-text);
+  margin: 0 0 0.6rem;
+}
+
+.nric-intro p {
+  color: var(--nric-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin: 0 0 0.6rem;
+}
+
+.nric-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.nric-intro a {
+  color: var(--nric-accent);
+  text-decoration: none;
+}
+
+.nric-intro a:hover {
+  text-decoration: underline;
+}
+
+/* ── Grid ── */
+.nric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .nric-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Card ── */
+.nric-card {
+  background: var(--nric-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--nric-border);
+  border-radius: var(--nric-radius);
+  padding: 1.75rem;
+  box-shadow: var(--nric-shadow);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.nric-card:hover {
+  box-shadow: var(--nric-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.nric-card h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--nric-text);
+  margin: 0 0 0.35rem;
+}
+
+.nric-card > p {
+  color: var(--nric-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+/* ── Form elements ── */
+.nric-page label {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--nric-text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.nric-page input[type="text"],
+.nric-page input[type="number"],
+.nric-page input[type="file"],
+.nric-page select {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  color: var(--nric-text);
+  background: var(--nric-surface);
+  border: 1px solid var(--nric-border);
+  border-radius: var(--nric-radius-sm);
+  margin-bottom: 0.85rem;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.nric-page input:focus,
+.nric-page select:focus {
+  outline: none;
+  border-color: var(--nric-accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.nric-inline-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.nric-inline-group input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.nric-inline-group button {
+  flex-shrink: 0;
+}
+
+/* ── Buttons ── */
+.nric-page button {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--nric-accent);
+  border: none;
+  border-radius: var(--nric-radius-sm);
+  padding: 0.6rem 1.4rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.nric-page button:hover {
+  background: var(--nric-accent-hover);
+  transform: translateY(-1px);
+}
+
+.nric-page button:active {
+  transform: translateY(0);
+}
+
+/* ── Results ── */
+.nric-result {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  min-height: 1.4em;
+}
+
+.nric-result.success {
+  color: var(--nric-success);
+}
+
+.nric-result.error {
+  color: var(--nric-error);
+}
+
+.nric-mono {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+}
+
+/* ── Code inline ── */
+.nric-card code {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.85em;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
