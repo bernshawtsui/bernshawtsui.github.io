@@ -10,6 +10,9 @@ markup:
       unsafe: true
 
 params:
+  author:
+    name: Wenshuo Max Cui
+    email: cuiwenshuo@gmail.com
   defaultTheme: light
   profileMode:
     enabled: true
@@ -59,3 +62,7 @@ menu:
       name: NRIC Tool
       url: /nric-tool
       weight: 40
+    - identifier: wyde
+      name: wyde
+      url: /wyde
+      weight: 50
